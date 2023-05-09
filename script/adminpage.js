@@ -195,4 +195,45 @@ toggleuserbtnAV.addEventListener("click", () => {
     }
 })
 
+//display students
+fetchSData
+function fetchSData() {
+    fetch(`https://bug-free-robot.onrender.com/students`)
+        .then(res => { console.log(res) })
+        .then(data => { console.log(data), displaystudent() })
+        .catch(err => { console.log(err) })
+}
 
+function displaystudent(data) {
+    let scontainer = document.getElementById("scontainer")
+    scontainer.innerHTML = ""
+    data.forEach((item) => {
+        let id = document.createElement("id")
+        let name = document.createElement("name")
+        let image = document.createElement("image")
+        let d_o_b = document.createElement("d-o-b")
+        let gender = document.createElement("gender")
+        let category = document.createElement("category")
+        let email = document.createElement("email")
+        let pass = document.createElement("pass")
+        let mobile = document.createElement("mobile")
+        let Delete=document.createElement("button")
+
+        id.innerText = item.id
+        name.innerText = item.name
+        image.innerText = item.image
+        d_o_b.innerText = item.d - o - b
+        gender.innerText = item.gender
+        email.innerText = item.email
+        pass.innerText = item.pass
+        mobile.innerText = item.mobile
+        Delete.innerText="Delete"
+        Delete.addEventListener("click",deleteitem)
+
+        scontainer.append(id, name, image, d_o_b, gender, email, pass, mobile,Delete)
+
+    })
+}
+function deleteitem(index){
+    
+}
