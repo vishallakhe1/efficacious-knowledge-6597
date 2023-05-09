@@ -134,6 +134,7 @@
       body {
         margin: 0px;
         padding: 0px;
+        background-image: url("https://wallpaperaccess.com/full/7205205.jpg");
       }
 
       h1 {
@@ -164,8 +165,8 @@
         display: block;
         margin: auto;
         width: 100%;
-        border: 1px solid #ff4b2b;
-        background-color: #000000;
+        border: 1px solid #000000;
+        background-color: #71bdd5;
         color: #ffffff;
         font-size: 12px;
         font-weight: bold;
@@ -182,15 +183,20 @@
       }
 
       .container {
-        background-color: #fff;
+        /* background-color: #fff; */
+        width: 100%;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 50px;
+        grid-gap: 70px;
         margin: auto;
       }
       .container > div {
         width: 90%;
         padding: 50px;
+        margin: 20px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+          rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
       }
 
       footer {
@@ -218,14 +224,41 @@
         text-decoration: none;
       }
 
-      @media (max-width: 480px) {
+      @media (max-width: 600px) {
         .container {
           grid-template-columns: repeat(1, 1fr);
         }
       }
+
+      .alfa2 {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      .cont {
+        width: 100%;
+        display: grid;
+        margin: auto;
+        padding: 20px;
+        padding-bottom: 0px;
+      }
+      .cont > div {
+        width: 90%;
+        padding: 50px;
+        margin: auto;
+        /* margin-left: 5px; */
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+        text-align: center;
+        /* background-color: #71bdd5; */
+        font-family: Helvetica;
+      }
     </style>
   </head>
   <body>
+    <div class="cont">
+      <div class=".alfa2">
+        <h1>WELCOME TO NYC SCHOOL</h1>
+      </div>
+    </div>
+
     <!-- sign up -->
     <div class="container" id="container">
       <div>
